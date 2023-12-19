@@ -1,0 +1,22 @@
+{
+    "chain": "stacks",
+    "uuid": "1",
+    "name": "New Grant Proposal",
+    "version": 1,
+    "networks": {
+      "testnet": {
+        "if_this": {
+          "scope": "contract_call",
+          "contract_identifier": "ST2BSV94A650WGZ2YZ5Y8HM93W01NGT4GY0MGJECG.proposal-submission",
+          "method": "propose"
+        },
+        "then_that": {
+          "http_post": {
+            "url": "https://deep-cobras-speak.loca.lt/api/events",
+            "authorization_header": "Bearer 12345"
+          }
+        },
+        "start_block": 138339
+      }
+    }
+  }
